@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MeshSampleApplication</string>
+    <string name="title_normal">Bluetooth</string>
+    <string name="title_mesh">Mesh</string>
+</resources>
