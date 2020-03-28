@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="MeshFragment"
+            type="com.silvertak.meshsampleapplication.ui.mesh.MeshFragment" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <Button
+                android:id="@+id/prepareMeshButton"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:text="@string/mesh_prepare"
+                android:onClick="@{MeshFragment::onClick}"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp">
+            <Button
+                android:id="@+id/meshOnButton"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:text="@string/relay_on"
+                android:onClick="@{MeshFragment::onClick}"/>
+            <Button
+                android:id="@+id/meshOffButton"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:text="@string/relay_off"
+                android:onClick="@{MeshFragment::onClick}"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp">
+            <Button
+                android:id="@+id/relayButton"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:text="@string/relay_loop"
+                android:onClick="@{MeshFragment::onClick}"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

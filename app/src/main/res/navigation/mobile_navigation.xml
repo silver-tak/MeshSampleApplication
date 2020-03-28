@@ -7,14 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.silvertak.meshsampleapplication.ui.home.HomeFragment"
+        android:name="com.silvertak.meshsampleapplication.ui.ble.BleFragment"
         android:label="@string/title_normal"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.silvertak.meshsampleapplication.ui.dashboard.DashboardFragment"
+        android:name="com.silvertak.meshsampleapplication.ui.mesh.MeshFragment"
         android:label="@string/title_mesh"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_mesh" />
+
+    <fragment
+        android:id="@+id/navigation_scan"
+        android:name="com.silvertak.meshsampleapplication.ui.deviceScan.DevicesFragment"
+        android:label="@string/title_scan"/>
 
 </navigation>

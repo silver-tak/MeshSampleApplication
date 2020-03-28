@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ClickSwitchImageView">
+        <attr name="normalSrc" format="reference"/>
+        <attr name="clickedSrc" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="ClickSwitchColorTextView">
+        <attr name="normalBackgroundColor" format="reference"/>
+        <attr name="clickedBackgroundColor" format="reference"/>
+    </declare-styleable>
+</resources>

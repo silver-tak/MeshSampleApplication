@@ -2,4 +2,31 @@
     <string name="app_name">MeshSampleApplication</string>
     <string name="title_normal">Bluetooth</string>
     <string name="title_mesh">Mesh</string>
+    <string name="title_scan">Scan</string>
+    <string name="zachary_light_on">zachary_on</string>
+    <string name="zachary_light_off">zachary_off</string>
+    <string name="test1_light_on">test1_on</string>
+    <string name="test1_light_off">test1_off</string>
+    <string name="test2_light_on">test2_on</string>
+    <string name="test2_light_off">test2_off</string>
+    <string name="test3_light_on">test3_on</string>
+    <string name="test3_light_off">test3_off</string>
+    <string name="mesh_prepare">Prepare Mesh</string>
+    <string name="relay_on">Relay On</string>
+    <string name="relay_off">Relay Off</string>
+    <string name="relay_loop">Relay Loop</string>
+    <string name="paired">Paired</string>
+    <string name="connect">연결됨</string>
+
+    <string name="devices">Bluetooth LE Devices</string>
+
+    <string name="location_permission_title">Location permission required</string>
+    <string name="location_permission_message">This app does not use location information, but scanning for Bluetooth LE devices requires this permission</string>
+
+    <string name="location_denied_title">Location permission denied</string>
+    <string name="location_denied_message">As location permission has not been granted, this app cannot scan for Bluetooth LE devices.</string>
+    <string name="pairing_request">PAIRING requested\n-> Perform pairing steps. Connect again</string>
+
+    <string name="connect_error">연결 실패</string>
+    <string name="connect_success">연결 성공</string>
 </resources>
