@@ -3,6 +3,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorAccentClick">#a00037</color>
     <color name="black">#000000</color>
     <color name="transparent">#00000000</color>
     <color name="white">#ffffff</color>
@@ -14,6 +15,7 @@
     <color name="purple">#604a7b</color>
     <color name="selectBottomLayout">#f3e5f5</color>
     <color name="scrollbar">#ffc000</color>
+    <color name="scrollbarClick">#c79000</color>
     <color name="commonBtn">#3A3218</color>
     <!--<color name="commonBtn">#E6313117</color>-->
     <color name="commonBtn_click">#514b36</color>
@@ -27,4 +29,5 @@
     <color name="unselected">#717172</color>
     <color name="hashtag">#6083EE</color>
     <color name="totalBackground">#333B58</color>
+    <color name="totalBackgroundClick">#09152f</color>
 </resources>
