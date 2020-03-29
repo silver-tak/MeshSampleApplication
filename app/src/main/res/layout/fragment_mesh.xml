@@ -16,12 +16,16 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="2">
-            <Button
+            <com.silvertak.meshsampleapplication.ui.customview.ClickSwitchColorTextView
                 android:id="@+id/prepareMeshButton"
                 android:layout_weight="2"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
                 android:text="@string/mesh_prepare"
+                android:gravity="center"
+                app:normalBackgroundColor="@drawable/prepare_btn_radius_background"
+                app:clickedBackgroundColor="@drawable/prepare_btn_click_radius_background"
                 android:onClick="@{MeshFragment::onClick}"/>
         </LinearLayout>
         <LinearLayout
@@ -30,19 +34,27 @@
             android:orientation="horizontal"
             android:weightSum="2"
             android:layout_marginTop="10dp">
-            <Button
+            <com.silvertak.meshsampleapplication.ui.customview.ClickSwitchColorTextView
                 android:id="@+id/meshOnButton"
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
                 android:text="@string/relay_on"
+                android:gravity="center"
+                app:normalBackgroundColor="@drawable/on_btn_radius_background"
+                app:clickedBackgroundColor="@drawable/on_btn_click_radius_background"
                 android:onClick="@{MeshFragment::onClick}"/>
-            <Button
+            <com.silvertak.meshsampleapplication.ui.customview.ClickSwitchColorTextView
                 android:id="@+id/meshOffButton"
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
                 android:text="@string/relay_off"
+                android:gravity="center"
+                app:normalBackgroundColor="@drawable/off_btn_radius_background"
+                app:clickedBackgroundColor="@drawable/off_btn_click_radius_background"
                 android:onClick="@{MeshFragment::onClick}"/>
         </LinearLayout>
         <LinearLayout
@@ -51,14 +63,17 @@
             android:orientation="horizontal"
             android:weightSum="2"
             android:layout_marginTop="10dp">
-            <Button
+            <com.silvertak.meshsampleapplication.ui.customview.ClickSwitchColorTextView
                 android:id="@+id/relayButton"
                 android:layout_weight="2"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
                 android:text="@string/relay_loop"
+                android:gravity="center"
+                app:normalBackgroundColor="@drawable/loop_btn_radius_background"
+                app:clickedBackgroundColor="@drawable/loop_btn_click_radius_background"
                 android:onClick="@{MeshFragment::onClick}"/>
-
         </LinearLayout>
     </LinearLayout>
 </layout>

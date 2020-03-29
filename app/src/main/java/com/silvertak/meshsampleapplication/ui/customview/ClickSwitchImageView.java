@@ -4,28 +4,32 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.AppCompatImageView;
+
 import com.silvertak.meshsampleapplication.R;
 
-public class ClickSwitchColorTextView extends AppCompatTextView implements View.OnTouchListener {
+public class ClickSwitchImageView extends AppCompatImageView implements View.OnTouchListener {
 
-    private int nNormalColorId;
-    private int nClickedColorId;
+    private int nNormalImageId;
+    private int nClickedImageId;
     private  OnClickListener onClickListener;
 
-    public ClickSwitchColorTextView(Context context)
+    public ClickSwitchImageView(Context context)
     {
         super(context);
+        this.setScaleType(ScaleType.FIT_CENTER);
     }
 
-    public ClickSwitchColorTextView(Context context, AttributeSet attrs)
+    public ClickSwitchImageView(Context context, AttributeSet attrs)
     {
         super(context, attrs);
-        nNormalColorId = context.obtainStyledAttributes(attrs, R.styleable.ClickSwitchColorTextView).getResourceId(R.styleable.ClickSwitchColorTextView_normalBackgroundColor, 0);
-        nClickedColorId = context.obtainStyledAttributes(attrs, R.styleable.ClickSwitchColorTextView).getResourceId(R.styleable.ClickSwitchColorTextView_clickedBackgroundColor, 0);
+        this.setScaleType(ScaleType.FIT_CENTER);
+        nNormalImageId = context.obtainStyledAttributes(attrs, R.styleable.ClickSwitchImageView).getResourceId(R.styleable.ClickSwitchImageView_normalSrc, 0);
+        nClickedImageId = context.obtainStyledAttributes(attrs, R.styleable.ClickSwitchImageView).getResourceId(R.styleable.ClickSwitchImageView_clickedSrc, 0);
 
-        setBackgroundResource(nNormalColorId);
+        setImageResource(nNormalImageId);
         this.setOnTouchListener(this);
     }
 
@@ -38,10 +42,10 @@ public class ClickSwitchColorTextView extends AppCompatTextView implements View.
     public boolean onTouch(View view, MotionEvent motionEvent)
     {
         if(motionEvent.getAction() == MotionEvent.ACTION_DOWN || motionEvent.getAction() == MotionEvent.ACTION_MOVE)
-            setBackgroundResource(nClickedColorId);
+            setImageResource(nClickedImageId);
         else
         {
-            setBackgroundResource(nNormalColorId);
+            setImageResource(nNormalImageId);
             if(onClickListener != null) onClickListener.onClick(view);
         }
         return true;

@@ -3,6 +3,9 @@ package com.silvertak.meshsampleapplication.ui.ble;
 import android.Manifest;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -15,25 +18,25 @@ import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
 import com.silvertak.meshsampleapplication.R;
 import com.silvertak.meshsampleapplication.databinding.FragmentHomeBinding;
+import com.silvertak.meshsampleapplication.define.EventDefine;
 import com.silvertak.meshsampleapplication.define.MacAddress;
 import com.silvertak.meshsampleapplication.device.Test1Device;
 import com.silvertak.meshsampleapplication.device.Test2Device;
 import com.silvertak.meshsampleapplication.device.Test3Device;
 import com.silvertak.meshsampleapplication.device.ZacharyDevice;
+import com.silvertak.meshsampleapplication.ui.base.BaseFragment;
 
 import java.util.List;
 
-public class BleFragment extends Fragment implements View.OnClickListener {
+public class BleFragment extends BaseFragment implements View.OnClickListener {
 
     private FragmentHomeBinding mBinding;
-    private ZacharyDevice zacharyDevice;
-    private Test1Device test1Device;
-    private Test2Device test2Device;
-    private Test3Device test3Device;
 
+    @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-
+        init();
+        setHasOptionsMenu(true);
         final TedPermission.Builder tedPermission = TedPermission.with(getContext())
                 .setPermissionListener(new PermissionListener() {
                     @Override
@@ -51,15 +54,6 @@ public class BleFragment extends Fragment implements View.OnClickListener {
         mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false);
         mBinding.setBleFragment(this);
         return mBinding.getRoot();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        zacharyDevice = ZacharyDevice.getSingleton();
-        test1Device = Test1Device.getSingleton();
-        test2Device = Test2Device.getSingleton();
-        test3Device = Test3Device.getSingleton();
     }
 
     @Override

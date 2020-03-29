@@ -68,16 +68,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
-
-
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
+    public void onBackPressed() {
         if(ZacharyDevice.getSingleton() != null)
             ZacharyDevice.getSingleton().disconnect();
         if(Test1Device.getSingleton() != null)
@@ -88,6 +79,21 @@ public class MainActivity extends AppCompatActivity {
             Test3Device.getSingleton().disconnect();
 
         unregisterReceiver(broadcastReceiver);
+        super.onBackPressed();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+
     }
 
 
